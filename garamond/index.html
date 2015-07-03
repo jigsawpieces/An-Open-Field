@@ -1,0 +1,459 @@
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <title>An Open Field by Fevered Sleep</title>
+    <meta name="description" content="An Open Field by Fevered Sleep">
+    <!-- Latest compiled and minified CSS -->
+    <script type="text/javascript" src="//use.typekit.net/lon2dks.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    
+	<script type="text/javascript">
+    WebFontConfig = { fontdeck: { id: '45839' } };
+    
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+    </script>
+		
+    <link rel="stylesheet" href="version-d-style.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>    
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    
+	<link rel="icon" type="image/png" href="../favicon.ico" />
+	
+    <script>
+		$(document).ready(function() {
+   			$('.poem-container, ul.locations li').hide();
+			
+			$('ul.habitats li a').click(function(){
+				$(this).addClass('active');
+				// make all other habitats transparent
+				$('ul.habitats li a').not(this).addClass('inactive');
+				
+				// fade in locations list and make vertical line appear
+				$('ul.locations').css('background-image','url(list-vert.png)');
+				$('ul.locations li').fadeIn(1000);
+				
+				//remove all previous active classes
+				$("ul.locations li a").removeClass("active");
+				// new active class to selected link
+				$("ul.locations li a."+ this.id+"").addClass("active");
+				
+				$('ul.habitats li a').click(function(){
+					$('.poem-container').fadeOut(1000);
+					$('ul.habitats li a').removeClass("active");
+					$(this).addClass('active');
+				});
+			});
+			
+			$('ul.locations li a').click(function(){
+				$("ul.locations li a").removeClass("selected-location");
+				
+				// hide all the poems
+				$('.poem-container').hide();
+				
+				// fade in the right poem
+				$("."+ this.id +"").parent().fadeIn(1000);
+				
+				// make the location selected in the lsit
+				$(this).addClass('selected-location');
+				$("ul.locations li a").removeClass("active");
+				
+				// remove the vertical ul line
+				$('ul.locations').css('background-image','none');
+				
+				// show associated habitats
+				var getClass = $(this).attr('class').toString().split(' ');
+				
+				$.each(getClass, function (i, getClass) {
+            		$('ul.habitats li a#'+ getClass +'').addClass('active');
+        		});
+				
+			});
+			
+			$('p a').click(function(){
+				
+				$(this).addClass('active');
+
+			});
+			
+			$('.arrow-right').click(function(){
+				$(this).parents('.poem-container').fadeOut(0).next().fadeIn(3000);
+			});
+			
+			$('.arrow-left').click(function(){
+				$(this).parents('.poem-container').fadeOut(0).prev().fadeIn(3000);
+				//$('.lindisfarne').parent().fadeIn(1000);
+			});
+			
+			
+		});
+    </script>
+    
+  </head>
+  
+  <body>
+       
+       <div class="container">        
+  			
+            <div class="content">
+            
+				<ul class="habitats">
+                	<li><a href="#" id="brownfield">brownfield</a></li>
+                    <li><a href="#" id="coastal">coastal</a></li>
+                    <li><a href="#" id="farmland">farmland</a></li>
+                    <li><a href="#" id="freshwater">freshwater</a></li>
+                    <li><a href="#" id="lowland">lowland</a></li>
+                    <li><a href="#" id="marine">marine</a></li>
+                    <li><a href="#" id="upland">upland</a></li>
+                    <li><a href="#" id="urban">urban</a></li>
+                    <li><a href="#" id="woodland">woodland</a></li>
+          		</ul>
+                
+          	<div class="poem-wrap">
+            
+                <div class="poem-container">
+                    
+                    <div class="poem lindisfarne">
+                    
+                      <p>I don’t know what the better route out<br>of the village is. Let’s go that way,<br>where there was that lady, she was<br>selling lotions, potions and snakes and<br>something, trying to sell us Viking<br>shoes. A bank holiday in August</p>
+                        
+                        <p>The mainland is over there, this is the<br>road of the <a href="#">causeway</a>, the village is on<br>the south.</p>
+                        
+                        <p>It curves round – a bit like a pistol, with<br>the <a href="#">causeway</a></p>
+                        
+                        <p>Sometimes, just after winter it’s really<br>vibrant, orange, and purple and <a href="#">pink.</a></p>
+                        
+                        <p>It’s the wrong time of year for swallows<br>and too loud for <a href="#">sparrows</a>.</p>
+                        
+                        <p>Once I walked at night, this wind,<br>creeping sound, down to the beach, it<br>was all the <a href="#">seals</a>, they sang, like ghosts,<br>they were singing and singing and <br>singing<br>Bright, hazy sky, cloud, greys and<br>silvers.</p>
+    
+                        <p>You can hear them at night time, lying<br>in bed.</p>
+                                            
+                    </div>
+                
+                    <div class="poem lindisfarne">
+                                            
+						<p>There’s the church, and down to the<br>
+						
+                        castle that way. A white lady in the<br>priory</p>
+                        
+                        <p><a href="#">Goats</a>. One day they escaped, never to<br>be seen again, don’t know where they’ve<br>gone.</p>
+        
+                        <p>I board.<br>If the tide is really high. </p>
+        
+                        <p><a href="#">Pink</a> and <a href="#">grey</a> and this really <a href="#">yellow<br>grass</a>. All my photos have this dusty<br>pink haze, as if the sand has rose in it</p>
+        
+                        <p>At the weekend if I don’t have to go<br>anywhere, if I don’t have to go out, I<br>don’t notice the tide.</p>
+                        
+                        <p>The tide, not <a href="#">the sea</a></p>
+        
+                        <p>A proper cinema, in <a href="#">the city</a>, I could<br>just watch people rushing around all<br>day.</p>
+        
+                        <p>This is where we had the village hall. It<br>was knocked down ten years ago.<br>When I was younger we used to go<br>swimming, you get out and you have<br>this <a href="#">tingle</a></p>
+                        
+                        <i class="fa fa-angle-right arrow-right"></i>
+    
+                    </div>
+                      
+                  </div>
+                  
+                  <div class="poem-container">
+                    
+                    <div class="poem lindisfarne-2">
+                    
+                        <p>When the tide was open we’d go to<br>
+        
+                        school on the mainland and there’d be<br>
+        
+                        more people, and when it was closed<br>
+        
+                        we’d stay here with one teacher</p>
+        
+                        <p>The <a href="#">sheep</a>, this long <a href="#">yellow grass</a>.<br>
+        
+                        In the summer last year, I would walk<br>
+                        
+                        out everyday. I got lost somewhere in<br>
+                        
+                        these dunes. It was quite nice being lost,<br>
+                        
+                        as the sun was coming down<br>
+                        
+                        <a href="#">Red</a>.<br>
+                        
+                        <a href="#">Seaweed</a>.</p> 
+        
+                        <p>Two smaller <a href="#">islands</a>, they’re really rocky,<br>
+                        
+                        huge gulls, swooped.<br>
+                        
+                        A woman crying.</p>
+        
+                        <p>Your time there is rushed, you get oﬀ<br>
+                        
+                        the boat and then you have to get back<br>
+                        
+                        on.</p>
+        
+                        <p>That stone stack, is used to steer, the<br>
+                        
+                        white keeps on ﬂaking oﬀ and they<br>
+                        
+                        keep painting it back on.</p>
+                        
+                        <p><a href="#">The sea</a>. The edge. To see as far as</p>
+                        
+                        <p>He sailed tankers. Came past the island,<br>
+                        
+                        she ﬂew a lot. </p>
+                        
+                        <p>I had this dream of going somewhere</p>
+                    
+                    </div>
+                    
+                    <div class="poem lindisfarne-2">
+                                            
+                        <p>where the sea is warm. I’ve never swam<br>
+        
+                        in a warm sea.</p>
+                        
+                        <p>There’s my Dad’s boat, it wont be there<br>
+                        
+                        when I come back.</p>
+                        
+                        <i class="fa fa-angle-left arrow-left"></i>
+                    </div>
+                    
+                  </div>
+                  
+                    <div class="poem-container">
+                        
+                        <div class="poem dartmouth">
+                        	
+								<p>Dart is for the <a href="#">oak</a>,<br>
+								The trees just pour over</p>
+
+								<p>A line, they just hover, so you can swim<br>
+                                underneath<br>
+                                The leaves changing so gradually</p>
+                                
+                             	<p>We used to swim in the river and then<br>
+                                
+                                out<br>
+                                
+                                High cliff and craggy and these little<br>
+                                
+                                rocky bays</p>
+                                
+                                <p>A wintery day<br>
+                                
+                                Loads of wind, no wind, squalls and<br>
+                                
+                                bright sunshine,<br>
+                                
+                                A cormorant with a ﬁsh bigger than it’s<br>
+                                
+                                face</p>
+                                
+                                <p>A porpoise.</p>
+                                
+                                <p>A skipper.</p>
+                                
+                                <p>Sailing boats to take scientists places<br>
+                                
+                                they couldn’t get to any other way.<br>
+                                
+                                I used to race yachts.</p>
+                                
+                                <p><a href="#">Islands</a>.</p>
+                                
+                                <p>Our own little <a href="#">island</a>, and sitting at<br>
+                                
+                                screens because it’s a mangers job</p>
+                                
+                                <p>You wake up... you wash, look after the</p>
+                        
+                        </div>
+
+                        <div class="poem dartmouth">
+                        
+                        	<p>boat, look after each other, and do it all<br>
+
+                            over again</p>
+                            
+                            <p>We can go under the water, volcanoes,<br>
+                            
+                            <a href="#">mountains</a> and valleys and sea mantis<br>
+                            
+                            all these creatures we don’t know about.</p>
+                            <br>
+                            <p>The <a href="#">seals</a> and the basking sharks and<br>
+                            
+                            the <a href="#">turns</a><br>
+                            
+                            A ﬂock, they separate, split and then all<br>
+                            
+                            meet again</p>
+                            
+                            <p>Lighthouses, they ﬂash<br>
+                            
+                            Lands End – 1 – Lizard – 2 and Start<br>
+                            
+                            Point – 3, coming up on the coast</p>
+                            
+                            <p>The <a href="#">mackerel</a> used to run in the river<br>
+                            
+                            and now they don’t,<br>
+                            
+                            Now they are running north.<br>
+                            
+                            More shipping and more debris in the<br>
+                            
+                            water<br>
+                            
+                            Fishermen, a lot<br>
+                            
+                            Scallops and prawns</p>
+                            
+                            <p>A prawn cocktail used to be a treat<br>
+                            
+                            They were ﬁshing, white ﬁsh, haddock<br>
+                            
+                            and cod.</p>
+                            <br>
+                            
+                            <p>These birds that keep me company are</p>
+                        
+                        	<i class="fa fa-angle-right arrow-right"></i>
+                        
+                        </div>
+                    </div>
+                      
+                    <div class="poem-container">
+                        <div class="poem dartmouth-2">
+                        	
+                            <p>Gulls that dive and bite for sandwiches,<br>
+
+                            Bigger than that rabbit running toward<br>
+                            
+                            the rocks,</p>
+                            
+                            <p>I can be in <a href="#">the mist</a> all day, while an<br>
+                            
+                            hour away he walks the bridge in the<br>
+                            
+                            sun.</p>
+                            
+                            <p>The slate mine, shut down</p>
+                            
+                            <p>A <a href="#">yellow</a> plant.</p>
+                            
+                            <p>The wind farm, <br>
+                            
+                            The tide so high, <br>
+                            
+                            The smell of <a href="#">the sea</a> coming up</p>
+                            
+                            <p>Two swans on the strait </p>
+                            
+                            <p>Not unlike a ford</p>
+                            
+                            <p>The broken railway line </p>
+                            
+                            <p>Next door, one <a href="#">goat</a> and an empty<br>
+                            
+                            house</p>
+                            
+                            <p>My garden</p>
+                            
+                            <p>If I look across the way there is sun<br>
+                            
+                            splashed on the <a href="#">mountain’s</a> side</p>
+                            
+                            <p>There were no <a href="#">butterﬂies</a> for ﬁve years</p>
+                        
+                        </div>
+
+                        <div class="poem dartmouth-2">
+                        
+                        	<p>and this summer there must have been<br>
+    
+                            twenty, on one day, tiger winged and<br>
+                            
+                            beating</p>
+                            
+                            <p>So late the <a href="#">blackberries</a> are bitter.</p>
+                            
+                            <p>An adder’s head bitten oﬀ</p>
+                            
+                            <p>Damson berries</p>
+                            
+                            <p>A mauve haze above the trees, salt<br>
+                            
+                            marsh <a href="#">sheep</a> walking in a line </p>
+                            
+                            <p>I stood in the waves on the beach, in<br>
+                            
+                            the dark, having contractions</p>
+                        
+                        	<i class="fa fa-angle-left arrow-left"></i>
+                                                    
+                        </div>
+                        
+                        <div class="clearfix"></div>
+                        
+                    </div>
+				
+                </div>
+                
+				<ul class="locations">
+                	<li><a href="#" class="urban coastal" id="anerley">Anerley</a></li>
+                    <li><a href="#" class="woodland urban">Arundel</a></li>
+                    <li><a href="#" class="urban">Blackheath</a></li>
+                    <li><a href="#" class="freshwater farmland">Boston Spa</a></li>
+					<li><a href="#" class="urban">Bracknell</a></li>
+                    <li><a href="#" class="urban brownfield">Brockley</a></li>
+                    <li><a href="#" class="brownfield freshwater urban">Cookham</a></li>
+                    <li><a href="#" id="dartmouth" class="marine coastal freshwater">Dartmouth</a></li>
+                    <li><a href="#" class="brownfield freshwater urban">Earlsfield</a></li>
+                    <li><a href="#" class="farmland upland coastal freshwater">Evanton</a></li>
+                    <li><a href="#" class="coastal">Gorleston</a></li>
+                    <li><a href="#" class="urban freshwater">Lambeth</a></li>
+                    <li><a href="#" id="lindisfarne" class="coastal farmland">Lindisfarne</a></li>
+                    <li><a href="#" class="uploand lowland coastal">Lockton</a></li>
+                    <li><a href="#" class="coastal freshwater lowland marine">Looe</a></li>
+                    <li><a href="#" class="coastal">Lytham</a></li>
+                    <li><a href="#" class="farmland upland">Melton</a></li>
+                    <li><a href="#" class="coastal upland lowland woodland farmland freshwater">Penrhyndeudraeth</a></li>
+                    <li><a href="#" class="coastal woodland lowland farmland">Poynings</a></li>
+                    <li><a href="#" class="urban freshwater farmland">Preston</a></li>
+                    <li><a href="#" class="coastal marine urban">Saltdean</a></li>
+                    <li><a href="#" class="urban">Smithfield</a></li>
+                    <li><a href="#" class="urban freshwater">Southwark</a></li>
+                    <li><a href="#" class="urban">Tooting</a></li>
+                    <li><a href="#" class="farmland urban">Totteridge &amp; Whetstone</a></li>
+          		</ul>
+                
+                <div class="clearfix"></div>
+        	</div>
+                                    
+        <footer>
+        	
+            <img src="index.png" style="margin-left:165px;">
+        	<!--<img src="footer-logo.jpg" width="300" style="float:right; margin-right:200px">-->
+        
+        </footer>  
+          
+        </div>
+            
+  </body>
+
+</html>

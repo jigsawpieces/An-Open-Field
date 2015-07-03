@@ -1,0 +1,119 @@
+body {
+		font-family:'Mate', Times, serif;
+		font-weight:400;
+	}
+	
+	.container {
+		width:90%;
+		height:auto;
+		margin:0 auto;
+		padding:5% 1%;
+	}
+	
+	
+	h1, p {
+		font-family:'Mate', Times, serif;
+		font-weight:400;
+	}
+	
+	h1 {
+		font-size:48px;
+		margin-bottom:100px;
+		color:#0e6a73;
+	}
+	
+	p {
+		font-size:1.2em;
+		margin-bottom:1em;
+	}
+	
+	p a {
+		text-decoration:underline;
+		color:#7a9c9c;
+	}
+	
+	p a:hover{
+		text-decoration:none;
+		font-style:italic;
+		color:black;
+	}
+	
+	h1.title {
+		text-transform:uppercase;
+		font-family:'Mate', Times, serif;
+		-webkit-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		-o-transform: rotate(-90deg);
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+		position:absolute;
+		top: 40%;
+		right:0;
+		font-size:2em;
+		z-index:99;
+	}
+	
+	h1.title a, h1.title a:hover{
+		color:#000;
+		text-decoration:none;
+	}
+	
+	h2.poem-title{
+		font-size:1.5em;
+		margin-top:0;
+		margin-bottom:20px;
+	}
+		
+	.list p {
+		color:#7a9c9c;
+		font-family:'Open Sans', Arial, serif;
+		font-size:0.96em;
+	}
+	
+	.list p a{
+		color:#000;
+	}
+	
+	footer{
+		margin-top:40px;
+	}
+	
+	footer #page-counter p{
+		font-size:30px;
+		text-align:right;
+	}
+	
+	.gradient-background{
+		background:url(../img/background.png) no-repeat center right;
+	}
+	
+	a.gray {
+		color:#999;
+		text-decoration:none;
+		border-bottom:#000 2px solid;
+	}
+	
+	a.gray:hover{
+		border:0;
+	}
+	
+	a.planes{
+		font-style:italic;
+		border-bottom:#000 2px solid;
+		letter-spacing:3px;
+		text-decoration:none;
+		color:#000;
+	}
+	
+	a.planes:hover{
+		border:0;
+	}
+	
+	/**Twitter bootstrap overrides**/
+	
+	.carousel-control.right {
+		background-image:none;
+		color:black;
+		text-shadow:none;
+		top:50%;
+	}

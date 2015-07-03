@@ -1,0 +1,756 @@
+body {
+	font-family:"signo", Helvetica, sans-serif; font-style:normal;
+	margin:0;
+	padding:0;
+	background-image: url(img/bg.svg);
+	background-position: -15px 360px;
+	background-repeat: no-repeat;
+	text-rendering: optimizeLegibility; 
+	font-variant-ligatures: common-ligatures;
+	-moz-font-feature-settings:"liga=1, dlig=1"; 
+    -moz-font-feature-settings:"liga", "dlig"; /* EDIT: new syntax for FF 15+ */ 
+    -ms-font-feature-settings:"liga", "dlig"; 
+    -o-font-feature-settings:"liga", "dlig"; 
+    -webkit-font-feature-settings:"liga", "dlig"; 
+    font-feature-settings:"liga", "dlig";
+}
+
+.container {
+	width:100%;
+	height:auto;
+	padding:0;
+}
+
+.content{
+	width:100%;
+	height:607px;
+}
+
+p {
+	font-size:1.2em;
+	margin-bottom:1em;
+	line-height:1.7;
+	color: #272631;
+}
+
+p a {
+	text-decoration:none;
+}
+
+p a:hover{
+	text-decoration:none;
+	color:#272631;
+}
+
+ul {
+	margin:0;
+	padding:0;
+}
+
+ul li {
+	list-style:none;
+	margin:0 0 5px 0;
+	padding:0;
+	height:30px;
+}
+
+ul li a{
+	color:#20848C;
+	font-size:9px;
+	display:block;
+	text-decoration:none;
+	line-height:normal;
+	transition: all 500ms;
+	-moz-transition: all 500ms;
+	-webkit-transition: all 500ms;
+	-o-transition: all 500ms;
+	font-weight: 200 !important;
+}
+
+ul li a:hover{
+	color:#20848C !important;
+	font-weight: 300 !important;
+}
+
+ul.locations li a{
+	color:white;
+	height:15px;
+	display:inline-block;
+	line-height:15px;
+	letter-spacing:1px;
+	width: auto;
+}
+
+ul.location li a:hover{
+	color: #20848C !important;
+}
+
+ul.locations {
+	background-image:url(list-vert.png);
+	background-repeat:repeat-y;
+	background-position:0 0;
+	height:auto;
+	margin:29px 0 0 0;
+	position:absolute;
+	top:0;
+	left:681px;
+	padding-left:10px;
+}
+
+ul.locations li{
+	font-size:10px;
+	height:13px;
+}
+
+ul.locations li:last-child{
+	margin-bottom:0;
+}
+
+ul.location li:first-child{
+	margin-top: 5px;
+}
+
+ul.locations li a.selected-location{
+	text-transform:uppercase;
+	color:#20848C !important;
+}
+
+ul.locations li a.selected-location:before{
+	color:#20848C;
+}
+
+ul.locations li a:before{
+	content:'\f068';
+	font-family: FontAwesome; /* or whatever */
+	display: inline-block;
+	margin:0 0 1px -10px; /*same as padding-left set on li*/
+	width: 10px;
+	font-size:4px;
+	color:transparent;
+	width:12px;
+	height:12px;
+	line-height:12px;
+	vertical-align:middle;
+}
+
+ul.locations li a.active, ul.locations li a.active:before{
+	color:#20848C;
+}
+
+ul.location li a{
+	line-height:normal;
+	vertical-align:middle;
+}
+
+ul.habitats.menu-hide > li a, ul.locations.menu-hide > li a{
+	color: transparent;
+}
+
+ul.habitats.menu-hide > li > a:before, ul.locations.menu-hide > li > a:before{
+	color: #20848C;
+}
+
+ul li a.active{
+	cursor:pointer;
+	color:#20848C;
+}
+
+ul li a.active:hover{
+	text-decoration:none;
+}
+
+ul.habitats{
+	background-image:url(list-vert.png);
+	background-repeat:repeat-y;
+	background-position:100px 0;
+	font-size:1.2em;
+	float:left;
+	margin:28px 0 0 32px;
+	width:90px;
+	padding-right:20px;
+	position:relative;
+}
+
+ul.habitats li{
+	font-size:10px;
+	line-height:12px;
+	text-align: right;
+}
+
+ul.habitats li:last-child{
+	height:10px;
+	margin-bottom:0;
+}
+
+ul.habitats li a{
+	text-decoration:none;
+	text-transform:uppercase;
+	line-height:normal;
+	text-align:right;
+	letter-spacing:1px;
+	display: inline-block;
+	width: auto;
+}
+
+ul.habitats li a.active, ul.habitats li a.active:before{
+	color: #20848C !important;
+}
+
+ul.habitats li a.inactive, ul.habitats li a.inactive:before{
+	color:transparent;
+}
+
+ul.habitats li a:before{
+	content:'\f068';
+	font-family: FontAwesome; /* or whatever */
+	display: inline-block;
+	margin:0; /*same as padding-left set on li*/
+	width: 10px;
+	font-size:4px;
+	/*color:#20848C;*/
+	width:12px;
+	height:10px;
+	line-height:12px;
+	vertical-align:middle;
+	position:absolute;
+	right:9px;
+}
+
+ul.habitats li a:hover{
+	text-decoration:none;
+	color:#20848C !important;
+}
+ul.habitats li a, ul.locations li a{
+	color: transparent;
+}
+
+ul.habitats li a.text-hide:before, ul.locations li a.text-hide:before{
+	color: #20848C;
+}
+
+.poem-wrap{
+	width: 500px;
+	height: 585px;
+	display: block;
+	position: relative;
+	left: 20px;
+	overflow: hidden;
+}
+
+.poem-container{
+	width:580px;
+	height:auto;
+	margin-top:8px;
+}
+
+.poem-container > .poem:nth-child(2){
+	/*padding-right:40px;*/
+}
+
+.poem{
+	width:230px;
+	height:530px;
+	margin:21px 25px 10px 0px;
+	float:left;
+	position:relative;
+}
+
+.poem p, .col-3 p, footer p{
+		font-family: "adobe-caslon-pro", serif;
+	font-size:14px;
+	letter-spacing:0;
+	line-height:17px;
+	margin-top:0;
+	font-weight:400;
+	word-spacing:-1px;
+	margin-bottom:0;
+}
+.poem p.right{
+	text-align:right;
+	display:block;
+}
+.poem p.center{
+	text-align: center;
+}
+
+.poem p:last-of-type{
+	margin-bottom:0;
+}
+
+.poem p a, footer p a, .col-3 p a:hover {
+	color:#272631;
+	border:1px dashed #20848C;
+	display:inline-block;
+	height:13px;
+	padding: 0 1px;
+	margin: -1px 0;
+}
+
+.poem p a:hover{
+	border-color:#20848C;
+	color:#20848C;
+}
+
+.poem p a.active, footer p a.active, .glossary p a.active{
+	border:1px solid #20848C;
+	color:#20848C;
+}
+
+/** Other sections **/
+.landing-container{
+	height:580px;
+	position: relative;
+	top:20px;
+}
+.landing-container a{
+	display: block;
+	height: 17px;
+	position: absolute;
+	border: 1px dashed #20848C;
+}
+
+.landing-container a:hover{
+	border-style: solid;
+}
+
+.landing-container h1{
+	font-family: "History 14";
+	font-style: normal;
+	font-weight: normal;
+	font-stretch: normal;
+	font-size: 4em;
+	color: #272631;
+	margin: 0;
+	padding-top: 86px;
+	line-height: 1.5em;
+	text-align: center;
+	letter-spacing: 10px;
+}
+.col-3{
+	width: 31%;
+	float:left;
+	margin-top:22px;
+}
+
+.col-3 p a{
+	color:#272631;
+	border:1px dashed transparent;
+	display:inline-block;
+	height:13px;
+	padding: 0 1px;
+	margin: -1px 0;
+}
+
+/** ARROWS **/
+.arrow, .three-page-arrow{
+	width:28px;
+	height:15px;
+	display:block;
+	position:absolute;
+	bottom:-10px;
+	right:-15px;
+}
+
+.arrow .right, .arrow .left{
+	background-size: contain;
+	height: 11px;
+	width: 13px;
+	background-repeat: no-repeat;
+}
+
+.arrow .left{
+	background-position: center center;
+}
+.arrow .right.empty{
+	background-image: url(img/right-empty.svg);
+	float: right;
+}
+.arrow .left.empty{
+	background-image: url(img/left-empty.svg);
+	float: left;
+}
+
+.arrow .right.full{
+	background-image: url(img/right-full.svg);
+	float: right;
+	cursor: pointer;
+}
+.arrow .left.full{
+	background-image: url(img/left-full.svg);
+	float: left;
+	cursor: pointer;
+}
+
+.arrow .left.full:hover{
+	background-image: url(img/left-blue.svg);
+}
+
+.arrow .right.full:hover{
+	background-image: url(img/right-blue.svg);
+}
+
+img.glossary{
+	cursor:pointer;
+}
+
+.sidebar{
+	width: 26px;
+	margin: 0;
+	height: 270px;
+	position:absolute;
+	top:120px;
+	right:20px;
+	background: url('img/an-open-field.jpg') no-repeat;
+	background-size: contain;
+	cursor: pointer;
+}
+/*.sidebar h1{
+	font-family: "History 04";
+	font-style: normal;
+	font-weight: normal;
+	font-stretch: normal;
+	color: #272631;
+	font-size: 1.3em;
+	letter-spacing: 6px;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	width: 290px;
+	margin: 0;
+	height: 30px;
+	position:absolute;
+	top:190px;
+	right:-100px;
+}*/
+
+footer{
+	display:block;
+	width:100%;
+	height:50px;
+	/*position:absolute;
+	bottom:0;*/
+}
+
+span.italic{
+	font-family: "adobe-caslon-pro-i4",serif;
+	font-weight: 400;
+	font-style: italic;
+	line-height:17px;
+}
+
+footer a#glossary{
+	float: left;
+	margin-left: 162px;
+	cursor: pointer;
+	width: 17px;
+	height: 18px;
+	background: url(img/index-hover.png) no-repeat;
+	position: absolute;
+	bottom: 20px;
+}
+
+footer a#glossary:hover{
+	background: url(img/index.png) no-repeat;
+}
+
+
+footer p{
+	font-size: 14px;
+	margin-left: 418px;
+	font-weight: 400;
+	font-style: italic;
+}
+
+footer p a{
+	height: 14px;
+	padding-top: 2px;
+}
+
+footer p a:hover{
+	color: #20848C;
+}
+
+i {color:#20848C;}
+
+.clearfix{
+	clear:both;
+}
+
+@media screen and (min-width: 1200px){
+
+	body{
+		background-image: url(img/bg-1200px.svg);
+		background-position: -85px 440px
+	}
+
+	.content{
+		height: 690px;
+	}
+	.poem-wrap{
+		width: 650px;
+		height: 650px;
+	}
+	.poem-container{
+		width: 680px;
+	}
+
+	.landing-container{
+		height: 650px;
+		width: 500px;
+		margin: 0 auto;
+	}
+	ul li a{
+		font-size: 10px;
+	}
+	ul.habitats{
+		width: 160px;
+		background-position: 170px 0;
+		margin-top: 28px;
+	}
+
+	ul.habitats li, ul.habitats li:last-child{
+		height: 33px;
+	}
+
+	ul.habitats li a{
+		height: 33px;
+		line-height: 33px;
+		vertical-align: middle;
+	}	
+
+	ul.habitats li a:before{
+		height: 33px;
+		line-height: 33px;
+	}
+
+	ul.locations {
+		margin-top: 28px;
+		padding-top: 10px
+	}
+	ul.locations li, ul.locations li:last-child{
+		height: 15px;
+	}
+
+	ul.locations li a{
+		height: 15px;
+		line-height: 15px;
+		vertical-align: middle;
+	}	
+
+	ul.locations li a:before{
+		height: 15px;
+		line-height: 15px;
+	}
+
+	.poem{
+		width: 270px;
+		height: 600px;
+		margin-left: 30px;
+		margin-right: 27px;
+		margin-top: 30px;
+	}
+
+	.poem p, .col-3 p{
+		font-size: 16px;
+		line-height: 19px;
+	}
+
+	.poem p a, footer p a, .col-3 p a:hover {
+		height:16px;
+		padding: 0 1px;
+		margin: -1px 0;
+	}
+
+	ul.locations{
+		left: 900px;
+	}
+
+	footer p{
+		font-size: 16px;
+		margin-left: 582px;
+	}
+
+	footer a#glossary{
+		margin-left: 260px;
+	}
+	.links a{
+	}
+
+}
+
+.col-3 p a.lady{
+	height: 72px;
+	padding-right: 2px;
+}
+
+.col-3 p a.polythene{
+	height: 34px;
+	padding-right: 2px;
+}
+
+
+
+.about p a, .about-2 p a, .fevered-sleep p a{
+	text-decoration: underline;
+	border: 0;
+}
+
+.about p a:hover, .about-2 p a:hover, .fevered-sleep p a:hover{
+	text-decoration: none;
+	color: #272631;
+}
+
+.about p a.active, .about-2 p a.active, .fevered-sleep p a.active{
+	color: #20848C;
+	border: 0;
+}
+
+
+
+
+/* for all screens */
+#mobile-splash {display: none;}
+
+/* only when orientation is in portrait mode */
+@media only screen and (max-device-width: 480px) and (orientation: portrait) {
+
+
+#mobile-splash {
+    background-color:#fff;
+background-image: url('img/anopen-field-bg-p.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -o-background-size: 100% 100%, auto;
+  -moz-background-size: 100% 100%, auto;
+  -webkit-background-size: 100% 100%, auto;
+  background-size: 100% 100%, auto;
+    width:100%; 
+    height:100%; 
+    z-index:10;
+    top:0; 
+    left:0; 
+    position:fixed;
+	text-align:center;
+display:block; 
+}
+
+
+
+
+#front-page-logo h1 {
+    font-family: "History 14";
+    font-style: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 8em;
+    color: #272631;
+    margin: 0;
+    padding-top: 86px;
+    line-height: 1.5em;
+    text-align: center;
+    letter-spacing: 10px;
+}
+
+#front-page-credit {
+position:absolute;
+ left: 0;
+  right: 0;
+  margin: 0 auto;
+bottom:100px;
+}
+
+#front-page-credit p {
+font-family: "adobe-caslon-pro", serif !important;
+font-style:normal!important;
+line-height:40px!important;
+font-size:30px!important;
+margin:0px;
+padding:0px;
+}
+
+
+
+.italic {
+font-family: "adobe-caslon-pro", serif !important;
+font-style:italic!important;
+line-height:40px!important;
+font-size:30px!important;
+}
+
+	
+}
+
+
+
+
+@media only screen and (min-width : 321px) 
+and (max-device-width : 667px) 
+and (orientation: landscape) {
+
+#mobile-splash {
+    background-color:#fff;
+background-image: url('img/anopen-field-bg-l3.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -o-background-size: 100% 100%, auto;
+  -moz-background-size: 100% 100%, auto;
+  -webkit-background-size: 100% 100%, auto;
+  background-size: 100% 100%, auto;
+    width:100%; 
+    height:100%; 
+    z-index:10;
+    top:0; 
+    left:0; 
+    position:fixed;
+	text-align:center;
+display:block; 
+}
+
+
+
+
+#front-page-logo h1 {
+    font-family: "History 14";
+    font-style: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 70px;
+    color: #272631;
+    margin: 0;
+    padding-top: 28px;
+    line-height: 1.5em;
+    text-align: center;
+    letter-spacing: 10px;
+}
+
+#front-page-credit {
+position:absolute;
+ left: 0;
+  right: 0;
+  margin: 0 auto;
+bottom:15px;
+}
+
+#front-page-credit p {
+font-family: "adobe-caslon-pro", serif !important;
+font-style:normal!important;
+line-height:28px!important;
+font-size:18px!important;
+}
+
+
+.italic {
+font-family: "adobe-caslon-pro", serif !important;
+font-style:italic!important;
+line-height:28px!important;
+font-size:18px!important;
+}
+
+}
+
+
+

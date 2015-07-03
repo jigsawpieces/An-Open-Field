@@ -1,0 +1,192 @@
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <title>An Open Field by Fevered Sleep</title>
+    <meta name="description" content="An Open Field by Fevered Sleep">
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="//use.typekit.net/khe8foa.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script type="text/javascript">
+		WebFontConfig = { fontdeck: { id: '45839' } };
+		
+		(function() {
+		  var wf = document.createElement('script');
+		  wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+		  '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+		  wf.type = 'text/javascript';
+		  wf.async = 'true';
+		  var s = document.getElementsByTagName('script')[0];
+		  s.parentNode.insertBefore(wf, s);
+		})();
+	</script>
+		
+    <link rel="stylesheet" href="version-d-style-2.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    
+
+	<link rel="icon" type="image/png" href="../favicon.ico" />
+	
+    <script>
+		$(document).ready(function() {
+   			$('.lindisfarne, ul.locations').hide();
+			
+			$('ul.areas li a').click(function(){
+				
+				//$("ul.areas li a").fadeOut();
+				//$("ul.areas li a").removeClass("active");
+				//$(this).fadeIn();
+				
+				$('ul.locations').fadeIn(1000);
+				
+				$("ul.locations li a").removeClass("active");
+				$("ul.locations li a."+ this.id+"").addClass("active");
+			});
+			
+			$('#lindisfarne').click(function(){
+				
+				$('.lindisfarne').fadeIn(1000);
+				//$('ul.locations li:not("#lindisfarne")').fadeOut(1000);
+			});
+			
+			$('.lindisfarne p a').click(function(){
+				
+				$(this).addClass('active');
+
+			});
+			
+			
+		});
+    </script>
+    
+  </head>
+  
+  <body>
+       
+       <div class="container">
+        
+        <div class="row">
+        
+          <div class="col-md-2" style="width:145px;">
+	
+				<ul class="areas">
+                	<li><a href="#" id="brownfield">brownfield</a></li>
+                    <li><a href="#" id="coastal">coastal</a></li>
+                    <li><a href="#" id="farmland">farmland</a></li>
+                    <li><a href="#" id="freshwater">freshwater</a></li>
+                    <li><a href="#" id="lowland">lowland</a></li>
+                    <li><a href="#" id="marine">marine</a></li>
+                    <li><a href="#" id="upland">upland</a></li>
+                    <li><a href="#" id="urban">urban</a></li>
+                    <li><a href="#" id="woodland">woodland</a></li>
+          		</ul>
+                
+          </div>
+          
+          <div class="col-md-4" style="width:360px; min-height:800px; padding:0 30px;">
+          	
+            <div class="lindisfarne">
+                
+                  <p>I don’t know what the better route out of the village is. Let’s go that way, where there was that lady, she was selling lotions, potions and snakes and something, trying to sell us Viking shoes. A bank holiday in August</p>
+					
+                    <p>The mainland is over there, this is the road of the <a href="#">causeway</a>, the village is on the south. </p>
+                    
+                    <p>It curves round – a bit like a pistol, with the <a href="#">causeway</a></p>
+					
+                    <p>Sometimes, just after winter it’s really vibrant, orange, and purple and <a href="#">pink.</a></p>
+                    
+                    <p>It’s the wrong time of year for swallows and too loud for <a href="#">sparrows</a>.</p>
+                    
+                    <p>Once I walked at night, this wind, creeping sound, down to the beach, it was all the <a href="#">seals</a>, they sang, like ghosts, they were singing and singing and singing<br>Bright, hazy sky, cloud, greys and silvers.</p>
+
+					<p>You can hear them at night time, lying in bed.</p>
+                    
+                    <p>There’s the church, and down to the</p>
+                    
+                    
+          
+          	</div>
+          		
+          </div>
+          
+			<div class="col-md-4" style="width:360px; padding:0 30px;margin-right:60px;">
+            
+            <div class="lindisfarne">
+                
+                <p>castle that way. A white lady in the priory</p>
+				
+                <p><a href="#">Goats</a>. One day they escaped, never to be seen again, don’t know where they’ve gone.</p>
+
+				<p>I board.<br>If the tide is really high. </p>
+
+				<p><a href="#">Pink</a> and <a href="#">grey</a> and this really <a href="#">yellow grass</a>. All my photos have this dusty pink haze, as if the sand has rose in it</p>
+
+				<p>At the weekend if I don’t have to go anywhere, if I don’t have to go out, I don’t notice the tide.</p>
+                
+                <p>The tide, not <a href="#">the sea</a></p>
+
+				<p>A proper cinema, in <a href="#">the city</a>, I could just watch people rushing around all day.</p>
+
+				<p>This is where we had the village hall. It was knocked down ten years ago. When I was younger we used to go swimming, you get out and you have this <a href="#">tingle</a></p>
+              
+              </div>
+            
+			</div>
+            
+			<div class="col-md-2">
+	
+				<ul class="locations">
+                	<li><a href="#" class="urban coastal" id="anerley">Anerley</a></li>
+                    <li><a href="#" class="woodland urban">Arundel</a></li>
+                    <li><a href="#" class="urban">Blackheath</a></li>
+                    <li><a href="#" class="freshwater farmland">Boston Spa</a></li>
+					<li><a href="#" class="urban">Bracknell</a></li>
+                    <li><a href="#" class="urban brownfield">Brockley</a></li>
+                    <li><a href="#" class="brownfield freshwater urban">Cookham</a></li>
+                    <li><a href="#" class="marine coastal freshwater">Dartmouth</a></li>
+                    <li><a href="#" class="brownfield freshwater urban">Earlsfield</a></li>
+                    <li><a href="#" class="farmland upland coastal freshwater">Evanton</a></li>
+                    <li><a href="#" class="coastal">Gorleston</a></li>
+                    <li><a href="#" class="urban freshwater">Lambeth</a></li>
+                    <li><a href="#" id="lindisfarne" class="coastal farmland">Lindisfarne</a></li>
+                    <li><a href="#" class="uploand lowland coastal">Lockton</a></li>
+                    <li><a href="#" class="coastal freshwater lowland marine">Looe</a></li>
+                    <li><a href="#" class="coastal">Lytham</a></li>
+                    <li><a href="#" class="farmland upland">Melton</a></li>
+                    <li><a href="#" class="coastal upland lowland woodland farmland freshwater">Penrhyndeudraeth</a></li>
+                    <li><a href="#" class="coastal woodland lowland farmland">Poynings</a></li>
+                    <li><a href="#" class="urban freshwater farmland">Preston</a></li>
+                    <li><a href="#" class="coastal marine urban">Saltdean</a></li>
+                    <li><a href="#" class="urban">Smithfield</a></li>
+                    <li><a href="#" class="urban freshwater">Southwark</a></li>
+                    <li><a href="#" class="urban">Tooting</a></li>
+                    <li><a href="#" class="farmland urban">Totteridge  &amp; Whetstone</a></li>
+          		</ul>
+          </div>
+          
+          
+          
+          </div>
+          
+        <footer style="padding-left:160px;">
+        	
+            <i class="fa fa-bars"></i>
+        	<img src="footer-logo.jpg" width="300" style="float:right;">
+        
+        </footer>  
+          
+        </div>
+        
+        
+        
+
+      </div>
+       
+  </body>
+
+</html>

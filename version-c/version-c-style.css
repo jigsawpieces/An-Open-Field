@@ -1,0 +1,195 @@
+body {
+		font-family:'Mate', Times, serif;
+		font-weight:400;
+	}
+	
+	.container {
+		width:90%;
+		height:auto;
+		margin:0 auto;
+		padding:5% 1%;
+	}
+	
+	
+	h1, p {
+		font-family:'Mate', Times, serif;
+		font-weight:400;
+	}
+	
+	h1 {
+		font-size:48px;
+		margin-bottom:100px;
+		color:#0e6a73;
+	}
+	
+	p {
+		font-size:1.2em;
+		margin-bottom:1em;
+	}
+	
+	p a {
+		text-decoration:underline;
+		color:#777;
+	}
+	
+	p a:hover{
+		text-decoration:none;
+		font-style:italic;
+		color:black;
+	}
+	
+	h1.title {
+		text-transform:uppercase;
+		font-family:'Mate', Times, serif;
+		font-size:2em;
+		z-index:99;
+		margin:5% 0 0 0;
+	}
+	
+	h1.title a, h1.title a:hover{
+		color:#000;
+		text-decoration:none;
+	}
+	
+	h2.poem-title{
+		font-size:1.5em;
+		margin-top:0;
+		margin-bottom:20px;
+	}
+		
+	.list p {
+		color:#7a9c9c;
+		font-family:'Open Sans', Arial, serif;
+		font-size:0.96em;
+	}
+	
+	.list p a{
+		color:#000;
+	}
+	
+	ul {
+		margin:0;
+		padding:0;
+	}
+	
+	ul li {
+		list-style:none;
+		margin:0 0 5px 0;
+		padding:0;
+		line-height:1.7em;
+	}
+	
+	ul li a{
+		color:black;
+		/*text-decoration:underline;*/
+	}
+	
+	ul li a:hover{
+		color:black;
+		text-decoration:none !important;
+	}
+	
+	ul.locations {
+		margin-top:5%;
+	}
+	
+	ul.locations li a{
+		color:#eee;
+		cursor:default;
+		transition: all 1s;
+		-moz-transition: all 1s;
+		-webkit-transition: all 1s;
+		-o-transition: all 1s;
+		font-size:1.1em;
+	}	
+	
+	ul.locations li a:hover{
+		font-style:italic;
+		cursor:pointer;
+	}
+	
+	ul.locations li a.notActive, ul.locations li a.notActive:hover{
+		cursor:default;
+		font-style:normal !important;
+	}
+	
+	
+	ul.areas{
+		font-size:1.2em;
+		margin-top:5%;
+	}
+	
+	ul.areas li a{
+		border-bottom:1px solid white;
+		color:#000;
+		text-decoration:none;
+	}
+	
+	ul.areas li a#brownfield{
+		border-color:#663300;
+	}
+	
+	ul.areas li a#coastal{
+		border-color:#339999;
+	}
+	
+	ul.areas li a#farmland{
+		border-color:#cc3333;
+	}
+	
+	ul.areas li a#freshwater{
+		border-color:#33ffcc;
+	}
+	
+	ul.areas li a#lowland{
+		border-color:#cccc66;
+	}
+	
+	ul.areas li a#marine{
+		border-color:#336666;
+	}
+	
+	ul.areas li a#upland{
+		border-color:#b7ce85;
+	}
+	
+	ul.areas li a#urban{
+		border-color:#989898;
+	}
+	
+	ul.areas li a#woodland{
+		border-color:#cc9933;
+	}	
+	
+	ul.areas li a:hover{
+		text-decoration:none;
+	}
+	
+	p.list-of-things {
+		font-size:1.1em;
+		margin-top:5%;
+		color:#ededed;
+		line-height:2em;
+	}
+	
+	p.list-of-things a {
+		text-decoration:none;
+		color:#333;
+	}
+	
+	.anerley{
+		width:60%;
+		position:absolute;
+		background:rgba(255,255,255,0.9);
+		z-index:99;
+		outline:0;
+	}
+	
+	/**Twitter bootstrap overrides**/
+	
+	.carousel-control.right {
+		background-image:none;
+		color:black;
+		text-shadow:none;
+		top:50%;
+	}

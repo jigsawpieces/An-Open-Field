@@ -1,0 +1,210 @@
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <title>An Open Field by Fevered Sleep</title>
+    <meta name="description" content="An Open Field by Fevered Sleep">
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="version-b-style.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    
+	<link href='http://fonts.googleapis.com/css?family=Mate|Open+Sans' rel='stylesheet' type='text/css'>
+	<link rel="icon" type="image/png" href="../favicon.ico" />
+	
+    <script>
+    	$(document).ready(function() {
+   			$('.anerley, ul.locations').hide();
+			
+			$('ul.areas li a').click(function(){
+				$('ul.locations').fadeIn(1000);
+
+				var borderColorValue = $(this).css("border-bottom-color");
+				
+				$("ul.locations li a").removeClass("active").css("color", "#eee");
+				$("ul.locations li a."+ this.id+"").addClass("active").css("color", borderColorValue);
+			});
+			
+			$("ul.locations li a").click(function(e){
+    			return false;
+			});
+			
+			$("ul.locations li a.active").click(function(e){
+    			return true;
+			});
+			
+			$('html').click(function() {
+			   $('.anerley').fadeOut(1000); 
+			   $('p.list-of-things').css('z-index',"1");
+			});
+
+			$('#anerley').click(function(){
+				$('.anerley').fadeIn(1000);
+				$('p.list-of-things').css('z-index',"-10");
+			});
+			
+			
+		});
+    </script>
+    
+  </head>
+  
+  <body>
+       
+       <div class="container">
+
+		<h1 class="title"><a href="/version-b/">An Open Field</a></h1>
+        
+        <div class="row">
+        
+          <div class="col-md-2">
+	
+				<ul class="areas">
+                	<li><a href="#" id="brownfield">BROWNFIELD</a></li>
+                    <li><a href="#" id="coastal">COASTAL</a></li>
+                    <li><a href="#" id="farmland">FARMLAND</a></li>
+                    <li><a href="#" id="freshwater">FRESHWATER</a></li>
+                    <li><a href="#" id="lowland">LOWLAND</a></li>
+                    <li><a href="#" id="marine">MARINE</a></li>
+                    <li><a href="#" id="upland">UPLAND</a></li>
+                    <li><a href="#" id="urban">URBAN</a></li>
+                    <li><a href="#" id="woodland">WOODLAND</a></li>
+          		</ul>
+                
+          </div>
+          
+          <div class="col-md-4 anerley-bg" style="padding-left:5%">
+          	
+            <div class="anerley">
+            
+				<h2 class="poem-title"><strong>ANERLEY</strong> 1 <em>of</em> 1</h2>
+    
+                  <p>That’s the <a href="#">Flying Fox</a>, that doesn’t fly<br>anymore. Behind that hedge, is a boules<br>court and tennis courts.</p>
+                  
+                  <p>A path you can cycle around, as you learn<br>to ride your <a href="#">bike</a>.</p>
+                  
+                  <p>Here used to be a café over here.</p>
+                  
+                  <p>It's is where they keep the canoes and<br>those little dingy boats.</p>
+                  
+                  <p>It’s a good size to do a walk around</p>
+                  
+                  <p>Red brick, light brick<br>
+                  the sea, the downs</p>
+                  
+                  <p>My mum had a shop and we lived above<br>
+                  the shop</p>
+                  
+                  <p>I used to look out the window at<br>
+                  everyone at the bus station</p>
+                  
+                  <p>Over this one connecting <a href="#">bridge</a>, there’s<br>
+                  a mill there and a funny little network of<br>
+                  places.</p>
+                  <p>
+                  My Gran used to live the other side and<br>
+                  from her house, you used to be able to<br>
+                  walk</p>
+                  
+                  <p>the horizon</p>
+                  
+                  <p>something you rarely see in the city.</p>
+                  
+                  <p>Where the sky joins the land</p>
+          
+          	</div>
+          		
+          </div>
+          
+			<div class="col-md-4 anerley-bg">
+            
+            <div class="anerley">
+                
+                <p>My friends and I used to cycle around.<br>
+                  There were lots of fields, it could go on<br>
+                  forever, you could keep going and going<br>
+                  and going. You didn’t have to be home<br>
+                  for a time</p>
+                  
+                 <p>You didn’t really get a sense of tide.<br>
+                  more like a pond than a sea.</p>
+                  
+                  <p>It’s probably identical</p>
+                  
+                  <p>&nbsp;</p>
+                  
+                  <p>All the pigeons hang out here</p>
+                  
+                  <p>Rain. <a href="#">A very odd honking sound</a>,</p>
+                  
+                  <p>Where we’d feed all the ducks<br>
+                  The water is always calm<br>
+                  There are not very many people<br>
+                  Usually, there’s an old person<br>
+                  The p l a n e s, the odd train wandering<br>
+                  by, a lot of pigeons</p>
+                  
+                  <p>My kids always wanted to get across to<br>
+                  the <a href="#">island</a></p>
+                  
+                  <p>Buggies, scooters, lollies and<br>
+                  <a href="#">Ice-Cream</a> in the summer</p>
+    
+                  <p>Funny trees without their trunks,<br>
+                  Very good climbing,<br>
+                  Easy to access when you’re little</p>
+                  
+                  <p>The smell of wet, damp, grass</p>
+              
+              </div>
+            
+			</div>
+            
+			<div class="col-md-2">
+	
+				<ul class="locations">
+                	<li><a href="#" class="urban coastal" id="anerley">Anerley</a></li>
+                    <li><a href="#" class="woodland urban">Arundel</a></li>
+                    <li><a href="#" class="urban">Blackheath</a></li>
+                    <li><a href="#" class="freshwater farmland">Boston Spa</a></li>
+					<li><a href="#" class="urban">Bracknell</a></li>
+                    <li><a href="#" class="urban brownfield">Brockley</a></li>
+                    <li><a href="#" class="brownfield freshwater urban">Cookham</a></li>
+                    <li><a href="#" class="marine coastal freshwater">Dartmouth</a></li>
+                    <li><a href="#" class="brownfield freshwater urban">Earlsfield</a></li>
+                    <li><a href="#" class="farmland upland coastal freshwater">Evanton</a></li>
+                    <li><a href="#" class="coastal">Gorleston</a></li>
+                    <li><a href="#" class="urban freshwater">Lambeth</a></li>
+                    <li><a href="#" class="coastal farmland">Lindisfarne</a></li>
+                    <li><a href="#" class="uploand lowland coastal">Lockton</a></li>
+                    <li><a href="#" class="coastal freshwater lowland marine">Looe</a></li>
+                    <li><a href="#" class="coastal">Lytham</a></li>
+                    <li><a href="#" class="farmland upland">Melton</a></li>
+                    <li><a href="#" class="coastal upland lowland woodland farmland freshwater">Penrhyndeudraeth</a></li>
+                    <li><a href="#" class="coastal woodland lowland farmland">Poynings</a></li>
+                    <li><a href="#" class="urban freshwater farmland">Preston</a></li>
+                    <li><a href="#" class="coastal marine urban">Saltdean</a></li>
+                    <li><a href="#" class="urban">Smithfield</a></li>
+                    <li><a href="#" class="urban freshwater">Southwark</a></li>
+                    <li><a href="#" class="urban">Tooting</a></li>
+                    <li><a href="#" class="farmland urban">Totteridge  &amp; Whetstone</a></li>
+          		</ul>
+          </div>
+          
+          <p class="list-of-things">Grey, sparrows, squirrels, starlings, buzzards, kites, caterpillars, the city, concrete, bikes, the sky, pink, blackberries, bridges, windmills, parks, ponds, a broken nose, black backed gulls, capes, a curlew, hazels, scrub, gorse, oak, ash, giants, butterflies, snow, a tingle, dogs, ducks, deer, fishermen, sheep, turns, geese, the sea, mackerel, a big sheet of polythene, clouds, the moon, a storm, seals, seaweed, sisters, a lady swimming right down the middle of the river in her wetsuit, robins, planes, sledges, woodpeckers, the light, a causeway, a pier, bees, goats, hedgerows, the weir, islands, moss, a mountain, lake, moorhen, red, the mist, foxes, benches, grass, yellow.</p>
+                
+          
+          </div>
+          
+          
+          
+        </div>
+        
+
+      </div>
+       
+  </body>
+
+</html>
